@@ -5,9 +5,12 @@
 	<link rel="stylesheet" type="text/css" href="css/page.css">
 	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="fontawesome-free/css/all.min.css">
+	<link rel="stylesheet" type="text/css" href="bootstrap-select/dist/css/bootstrap-select.min.css">
  	<script type="text/javascript" src="js/page.js"></script> 
  	<script type="text/javascript" src="js/jquery.min.js"></script> 
  	<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+ 	<script type="text/javascript" src="js/popper.js"></script>
+ 	<script type="text/javascript" src="bootstrap-select/dist/js/bootstrap-select.min.js"></script>
 </head> 
 <body>
 	<div class="page"> 
@@ -44,24 +47,14 @@
 	</div>
 	<div class="container container-fluid">	
 		<form action="#">
-			
-			<label for="prof_name">Nome</label>
-			<input type="text" class="form-control" name="prof_name" id="prof_name">
 			<br />
-			<label for="data">Data de nascimento</label>
-			<input type="date" class="form-control date" name="data" id="data">
-			<br />
-			<label>Sexo</label>
-
-			<div class="col-md-4">
-				
-				<input type="radio"  name="sexo" id="homem">
-				<label for="homem">Homem</label>
-			</div>
-			<div class="col-md-4">
-				<input type="radio" name="sexo" id="mulher">
-				<label for="mulher" >Mulher</label>
-			</div>
+			<label for="disciplina">Disciplina</label>
+			<select id="disciplina" class="form-control">
+				<option value="estruturas">Estrutura de dados</option>
+				<option value="estruturas_2">Estrutura de dados 2</option>
+				<option value="tecnologia_i">Tecnologias de Internet</option>
+				<option value="comp_grafica">Computação Gráfica</option>
+			</select>
 			<br />
 			<button class="btn btn-outline-secondary" type="submit">Enviar</button>
 		</form>
