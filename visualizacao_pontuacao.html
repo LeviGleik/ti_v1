@@ -42,29 +42,38 @@
 			</nav>
 		</div>
 	</div>
-	<div class="container container-fluid">	
-		<form action="#">
-			
-			<label for="prof_name">Nome</label>
-			<input type="text" class="form-control" name="prof_name" id="prof_name">
-			<br />
-			<label for="data">Data de nascimento</label>
-			<input type="date" class="form-control date" name="data" id="data">
-			<br />
-			<label>Sexo</label>
-
-			<div class="col-md-4">
-				
-				<input type="radio"  name="sexo" id="homem">
-				<label for="homem">Homem</label>
-			</div>
-			<div class="col-md-4">
-				<input type="radio" name="sexo" id="mulher">
-				<label for="mulher" >Mulher</label>
-			</div>
-			<br />
-			<button class="btn btn-outline-secondary" type="submit">Enviar</button>
-		</form>
+	<div class="container container-fluid">
+		<br />
+		<table class="table table-hover">
+		  <thead class="thead-light">
+		    <tr>
+		      <th scope="col">#</th>
+		      <th scope="col">Aluno</th>
+		      <th scope="col">Disciplina</th>
+		      <th scope="col">Pontuação</th>
+		    </tr>
+		  </thead>
+		  <tbody>
+		    <tr>
+		      <th scope="row">1</th>
+		      <td>Renan Gomes</td>
+		      <td>Estrutura de dados</td>
+		      <td>5.7</td>
+		    </tr>
+		    <tr>
+		      <th scope="row">2</th>
+		      <td>João Silva</td>
+		      <td>Estrutura de dados 2</td>
+		      <td>7.2</td>
+		    </tr>
+		    <tr>
+		      <th scope="row">3</th>
+		      <td>Pedro Costa</td>
+		      <td>Teconologias de internet</td>
+		      <td>8.4</td>
+		    </tr>
+		  </tbody>
+		</table>
 	</div>
 </body>
 </html>
