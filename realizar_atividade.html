@@ -5,12 +5,9 @@
 	<link rel="stylesheet" type="text/css" href="css/page.css">
 	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="fontawesome-free/css/all.min.css">
-	<link rel="stylesheet" type="text/css" href="bootstrap-select/dist/css/bootstrap-select.min.css">
  	<script type="text/javascript" src="js/page.js"></script> 
  	<script type="text/javascript" src="js/jquery.min.js"></script> 
  	<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
- 	<script type="text/javascript" src="js/popper.js"></script>
- 	<script type="text/javascript" src="bootstrap-select/dist/js/bootstrap-select.min.js"></script>
 </head> 
 <body>
 	<div class="page"> 
@@ -56,9 +53,36 @@
 				<option value="tecnologia_i">Tecnologias de Internet</option>
 				<option value="comp_grafica">Computação Gráfica</option>
 			</select>
+
+			<label for="atvd">Atividades</label>
+			<select id="atvd" class="form-control">
+				<option value='ponteiro'>Manipulação de ponteiros</option>
+				<option value='pilha'>Pilhas</option>
+				<option value='fila'>Filas</option>
+				<option value='lista_s'>Trabalhando com listas</option>
+				<option value='lista_e'>Listas encadeadas</option>
+			</select>			
 			<br />
 			<button class="btn btn-outline-secondary" type="submit">Enviar</button>
 		</form>
 	</div>
+	<script type="text/javascript">
+		$(function(){
+			$("#disciplina").change(function(){
+				$("#atvd option").each(function(){
+					$(this).remove();
+				});
+				if($(this).val() == "estruturas_2"){
+					$("#atvd").html("<option value='binaria'>Percurso em árvore binária</option>\n<option value='naria'>Pré-ordem em árvore n-ária</option>\n<option value='avl'>Balanceamento em árvores AVL</option>\n");
+				}else if($(this).val() == "estruturas"){
+					$("#atvd").html("<option value='ponteiro'>Manipulação de ponteiros</option>\n<option value='pilha'>Pilhas</option>\n<option value='fila'>Filas</option>\n<option value='lista_s'>Trabalhando com listas</option>\n<option value='lista_e'>Listas encadeadas</option>");
+				}else if($(this).val() == "tecnologia_i"){
+					$("#atvd").html("<option value='html'>HTML</option>\n<option value='css'>CSS</option>\n<option value='js'>Javascript</option>\n");
+				}else if($(this).val() == "comp_grafica"){
+					$("#atvd").html("<option value='trans'>Transformação em 2D</option>\n<option value='escala'>Escalonamento</option>\n<option value='aa'>Anti-aliasing</option>\n");
+				}
+			});
+		});
+	</script>
 </body>
 </html>
